@@ -1,2 +1,2 @@
-# gulp-pug-sass
-for use pug and sass
+# gulp-pug
+for use pug
