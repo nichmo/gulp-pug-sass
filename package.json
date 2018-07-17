@@ -1,17 +1,31 @@
 {
   "name": "gulp-pug-sass",
   "version": "1.0.0",
-  "description": "gulp-pug環境",
-  "repository": "https://github.com/nichmo/gulp-pug-sass.git",
+  "description": "pug,sassのコンパイル",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 iOS versions",
+    "last 2 Edge versions",
+    "ie 11"
+  ],
   "devDependencies": {
-    "browser-sync": "^2.24.5",
-    "gulp": "^3.9.1",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.0",
+    "autoprefixer": "^9.0.0",
+    "csswring": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-postcss": "^7.0.1",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "postcss-flexbugs-fixes": "^3.3.1"
   }
 }

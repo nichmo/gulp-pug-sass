@@ -1,41 +1,67 @@
+const 
+  gulp = require('gulp')
+  sass = require('gulp-sass')
+  postcss = require('gulp-postcss')
+  autoprefixer = require('autoprefixer')
+  flexBugsFixes = require('postcss-flexbugs-fixes')
+  cssWring = require('csswring')
+  pug = require('gulp-pug')
+  htmlmin = require('gulp-htmlmin')
 
-const gulp = require('gulp');
-const sass = require('gulp-sass'),
-      pug = require('gulp-pug'),
-      plumber = require('gulp-plumber'),
-      browserSync = require('browser-sync'),
-      notify = require('gulp-notify');
+const
+  autoprefixerOption = {
+    grid: true
+  }
+  htmlminOption = {
+    collapseWhitespace: true
+  }
 
-gulp.task('default', ['sass', 'browser-sync', 'pug', 'watch'])
+const
+  postcssOption = [
+    flexBugsFixes,
+    autoprefixer(autoprefixerOption),
+    // cssWring
+    // ↑をやるとめっちゃ圧縮される
+  ]
 
-// 監視：コード変化時更新する
-gulp.task('watch', () => {
-  gulp.watch(['./sass/**'], () => {
-    gulp.setMaxListeners(['sass']);
-  });
-  gulp.watch(['./pug/**'], () => {
-    gulp.setMaxListeners(['pug']);
-  });
-});
+gulp.task('default', () => {
+  console.log('test')
+})
 
-//ブラウザ表示
-gulp.task('browser-sync', () => {
-  browserSync({
-    server: {
-      baseDir: './'  //サーバとなるrootディレクトリ
-    }
-  });
-  // ファイルの監視
-  // 以下のファイルが変わったらリロードする
-  gulp.watch('./js/**/*.js',  ['reload']);
-  gulp.watch('./*.html',      ['reload']);
+// gulp.task('sass', () => {
+//   return gulp.src('./src/sass/**/*.scss')
+//     .pipe(sass({outputStyle: 'expanded'}))
+//     //compactを選択すると1行になる
+//     // .pipe(sass())
+//     .pipe(postcss(postcssOption))
+//     .pipe(gulp.dest('./dist/css'));
+// })
 
-});
+// gulp.task('sass', () => {
+//   return gulp.src('./dist/css/**/*.css')
+//     .pipe(postcss(postcssOption))
+//     .pipe(gulp.dest('./dist/css'));
+// })
+
+gulp.task('sass', () => {
+  return gulp.src('./src/sass/**/*.sass')
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(postcss(postcssOption))
+    .pipe(gulp.dest('./dist/css'));
+})
 
 gulp.task('pug', () => {
-  return gulp.src(['./pug/**/*.pug', '!./pug/**/_*.pug'])
-  .pipe(pug({
-    pretty: true
-  }))
-  .pipe(gulp.dest('./html/'))
+  return gulp.src('./src/pug/**/*.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    // .pipe(htmlmin(htmlminOption))
+    // これ使うとめっちゃ圧縮される
+    .pipe(gulp.dest('./dist'))
 })
+
+gulp.task('watch', () => {
+  gulp.watch('./src/sass/**/*.sass', gulp.series('sass'))
+  gulp.watch('./src/pug/**/*.pug', gulp.series('pug'))
+})
+
