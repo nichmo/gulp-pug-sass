@@ -28,17 +28,11 @@ gulp.task('default', () => {
   console.log('test')
 })
 
+//scssファイルの場合はこちらを使う
 // gulp.task('sass', () => {
 //   return gulp.src('./src/sass/**/*.scss')
 //     .pipe(sass({outputStyle: 'expanded'}))
 //     //compactを選択すると1行になる
-//     // .pipe(sass())
-//     .pipe(postcss(postcssOption))
-//     .pipe(gulp.dest('./dist/css'));
-// })
-
-// gulp.task('sass', () => {
-//   return gulp.src('./dist/css/**/*.css')
 //     .pipe(postcss(postcssOption))
 //     .pipe(gulp.dest('./dist/css'));
 // })
@@ -56,7 +50,7 @@ gulp.task('pug', () => {
       pretty: true
     }))
     // .pipe(htmlmin(htmlminOption))
-    // これ使うとめっちゃ圧縮される
+    // ↑これ使うとめっちゃ圧縮される
     .pipe(gulp.dest('./dist'))
 })
 
