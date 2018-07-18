@@ -7,14 +7,27 @@ const
   cssWring = require('csswring')
   pug = require('gulp-pug')
   htmlmin = require('gulp-htmlmin')
+  imagemin = require('gulp-imagemin')
+  imageminPngquant = require('imagemin-pngquant')
+  imageminMozjpeg = require('imagemin-mozjpeg')
 
 const
   autoprefixerOption = {
     grid: true
   }
+
   htmlminOption = {
     collapseWhitespace: true
   }
+
+  imageminOption = [
+    imageminPngquant({ quality: '80'}),
+    imageminMozjpeg({ quality: 90 }),
+    imagemin.gifsicle(),
+    imagemin.jpegtran(),
+    imagemin.optipng(),
+    imagemin.svgo()
+  ]
 
 const
   postcssOption = [
@@ -52,6 +65,12 @@ gulp.task('pug', () => {
     // .pipe(htmlmin(htmlminOption))
     // ↑これ使うとめっちゃ圧縮される
     .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('imagemin', () => {
+  return gulp.src('./src/img/*')
+    .pipe(imagemin(imageminOption))
+    .pipe(gulp.dest('./dist/img'))
 })
 
 gulp.task('watch', () => {
