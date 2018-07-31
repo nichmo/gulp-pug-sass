@@ -10,6 +10,8 @@ const
   imagemin = require('gulp-imagemin')
   imageminPngquant = require('imagemin-pngquant')
   imageminMozjpeg = require('imagemin-mozjpeg')
+  browserSync = require('browser-sync').create()
+  plumber = require('gulp-plumber')
 
 const
   autoprefixerOption = {
@@ -37,9 +39,13 @@ const
     // ↑をやるとめっちゃ圧縮される
   ]
 
-gulp.task('default', () => {
-  console.log('test')
-})
+const browserSyncOption = {
+  server: './dist'
+}
+  
+// gulp.task('default', () => {
+//   console.log('test')
+// })
 
 //scssファイルの場合はこちらを使う
 // gulp.task('sass', () => {
@@ -52,7 +58,9 @@ gulp.task('default', () => {
 
 gulp.task('sass', () => {
   return gulp.src('./src/sass/**/*.sass')
+    .pipe(plumber())
     .pipe(sass({outputStyle: 'expanded'}))
+    // .pipe(sass({outputStyle: 'compact'}))
     .pipe(postcss(postcssOption))
     .pipe(gulp.dest('./dist/css'));
 })
@@ -73,8 +81,28 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest('./dist/img'))
 })
 
-gulp.task('watch', () => {
+// gulp.task('watch', () => {
+//   gulp.watch('./src/sass/**/*.sass', gulp.series('sass'))
+//   gulp.watch('./src/pug/**/*.pug', gulp.series('pug'))
+// })
+
+gulp.task('serve', (done) => {
+  browserSync.init(browserSyncOption)
+  done()
+})
+
+gulp.task('watch', (done) => {
+  const browserReload = (done) => {
+    browserSync.reload()
+    done()
+  }
   gulp.watch('./src/sass/**/*.sass', gulp.series('sass'))
   gulp.watch('./src/pug/**/*.pug', gulp.series('pug'))
+  gulp.watch('./dist/**/*', browserReload)
 })
+
+gulp.task('default', gulp.series('serve', 'watch'))
+
+
+
 
