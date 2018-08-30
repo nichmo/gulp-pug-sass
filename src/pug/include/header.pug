@@ -1,8 +1,38 @@
-doctype html
-html(lang="ja")
-  head
-    meta(charset="utf-8")
-    link(rel="stylesheet", href="css/base01.css")
-    title テストページ
-  body
-    header.header
+header.header.header-default
+  .header-inner
+    .header-logo.hidden-sp
+      .corp-logo
+        a(href="")
+          img(src="", alt="corp-title")
+    .header-item
+    nav.header-ulils.hidden-sp
+    nav.global-nav.js-global-nav
+      ul.global-nav-list
+        li.hidden-pc.hidden-tb
+
+        li.js-global-topics
+          a(href="/topics/").global-nav-link.hidden-sp.hidden-tb
+            span.last
+              |topics-title
+          //- span.gloval-nav-link.global-nav-link--next.hidden-pc
+          .drop-menu.drop-menu-topics.sp-drop-menu
+            //- spはそのまま直下にリスト
+            //- ul.sp-drop-menu-inner.hidden-pc.hidden-tb
+            .drop-menu-inner.hidden-sp
+              //- beforeでアイコンを表示する
+              a(href="/topics/").drop-menu-link.mt35
+              ul.drop-menu-topics-item
+                li
+                  a(href="")
+                    img
+                  //- before要素で矢印つける
+                  a(href="")
+                    |topics-title-01
+                  p
+                    |topics-discription
+
+
+            
+
+
+
