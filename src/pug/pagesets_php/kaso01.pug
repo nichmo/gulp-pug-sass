@@ -1,0 +1,106 @@
+- var webpagetitle = 'webpagetitle'
+- var groupname = 'grouptitle'
+//- 下層ページのタイトル
+- var pagename = 'pagetitle'
+//- ページ毎にidを指定する body,sectionに使用する
+- var page_id = 'page_id'
+//- 共通グループのclassを指定する
+- var group_class = 'kaigyo'
+//- topicのサブタイトル section毎 
+- var keyword = 'topic'
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Language" content="ja">
+<title>#{webpagetitle}： #{pagename}</title>
+<!--#include virtual="/include/head.html" -->
+</head>
+body(id=`${page_id}` class=`${group_class}`).jp.kaso
+  <!--#include virtual="/include/header.html"-->
+  main
+    article#top
+      section#mainVisual
+        .section
+          .mainVisual.pc
+            h1 #{groupname}
+            ul
+              li
+                a(href="") 
+                  .menuBlock Block01
+                  span.icon
+              li
+                a(href="") 
+                  .menuBlock Block02<br />Block02
+                  span.icon
+              li
+                a(href="") 
+                  .menuBlock Block03<br />Block03
+                  span.icon
+          .mainVisual.sp
+          .mainVisual.iphone
+    article#body
+      section(id=`${page_id}`+'_top')
+        .title #{pagename}        
+        .subtitle subtitle
+        .image
+        .desc
+          p
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+						br
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+      section(id=`${page_id}`+'_01')
+        .section
+          .title
+            span #{keyword}
+            span 1
+            span subtitle
+          .desc
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+						br
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+          .button
+            a 詳細はこちら
+
+      section(id=`${page_id}`+'_02')
+        .section
+          .title
+            span #{keyword}
+            span 2
+            span subtitle
+          .desc
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+						br
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+          .flow
+            .title
+              |flow
+            dl
+              dt flow1
+              dd
+		            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+            dl
+              dt flow2
+              dd
+		            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+            dl
+              dt flow3
+              dd
+                |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+          .button
+            a 詳細はこちら
+
+      section(id=`${page_id}`+'_03')
+        .section
+          .title
+            span #{keyword}
+            span 3
+            span subtitle
+          .desc
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+						br
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam veritatis qui ad eum exercitationem ipsum quos vitae. Obcaecati, ipsam!
+
+  <!--#include virtual="/include/footer.html" -->
