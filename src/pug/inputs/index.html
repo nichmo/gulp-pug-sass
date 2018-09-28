@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Language" content="ja">
+<title>XXXX様デザイン案A</title>
+<!--#include virtual="/include/head.html" -->
+<script type="text/javascript" src="/js/bxslider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.bxslider').bxSlider({
+  startSlide:0,
+  moveSlides: 1,
+  slideMargin: 0,
+  auto: true,
+  mode: 'fade',
+  touchEnabled: true,
+  infiniteLoop: true,
+  controls:false,
+  pager:true,
+  pagerCustom: '#bx_pager'
+});
+});
+$(window).load(function()
+{
+	var _width_=$(window).width();
+	var _tab_=750;
+	var _sp_=600;
+	
+	if(_width_>=_tab_+1)
+	{
+		$("#info .infoList > ul").slick
+		({
+			autoplay: true,
+			slidesToShow:3,
+		});
+		
+		$("#voice .voiceList > ul").slick
+		({
+			autoplay: true,
+			slidesToShow:4,
+		});
+	}
+	
+	if(_width_<=_tab_ && _width_>=_sp_+1)
+	{
+		$("#info .infoList > ul,#voice .voiceList > ul").slick
+		({
+			autoplay: true,
+			slidesToShow:3,
+		});
+	}
+	
+	if(_width_<=_sp_)
+	{
+		$("#info .infoList > ul,#voice .voiceList > ul").slick
+		({
+			autoplay: true,
+			slidesToShow:1,
+		});
+	}
+
+});
+</script>
+</head>
+<body id="top" class="jp top index">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=382019408597045";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'ja'}
+</script>
+<!--body-->
+<!--header-->
+<!--#include virtual="/include/header.html"-->
+<!--main-->
+<main>
+  <!--article-->
+  <article id="top">
+    <!--section-->
+    <section>
+      <div class="section">
+        <!-- <div class="mainVisual pc" style="background:url(/img/visual.jpg) center center /cover no-repeat;"> -->
+        <div class="mainVisual pc">
+          <!-- <div class="img"><img src="/img/img.gif" width="840" height="560" style="opacity:0;" /></div> -->
+          <div class="topSlideImg">
+
+            <div id="slider" class="bxslider">
+
+              <div class="messageWrap topVisual">
+                <ul>
+                  <li><img src="/img/visual_text_01.png" /></li>
+                  <li><img src="/img/visual_text_02.png" /></li>
+                </ul>
+              </div>
+
+              <div class="messageWrap seimenVisual">
+                <ul>
+                  <li><img src="/img/visual_seimen_text_01.png" /></li>
+                  <li><img src="/img/visual_seimen_text_02.png" /></li>
+                </ul>
+              </div>
+              <div class="messageWrap hyakunenVisual">
+                <ul>
+                  <li><img src="/img/visual_100nen_text_01.png" /></li>
+                  <li><img src="/img/visual_100nen_text_02.png" /></li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+    
+        </div>
+        <div class="mainVisual sp" style="background:url(/img/visual_sp.jpg) center center /cover no-repeat;">
+            <div class="img"><img src="/img/img.gif" width="420" height="420" style="opacity:0;" /></div>
+        </div>
+        <div class="mainVisual iphone" style="background:url(/img/visual_sp.jpg) center center /cover no-repeat;">
+          <div class="img"><img src="/img/img.gif" width="280" height="280" style="opacity:0;" /></div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!--//section-->
+  </article>
+  <!--article-->
+  <!-- <article id="body" class="pc"> -->
+  <article id="body">
+    <!--section-->
+    <section id="shop01">
+      <div class="section">
+        <div class="shopLink" type="fade">
+          <ul class="clearfix">
+            <li>
+              <a href="">
+                <div class="image">
+                  <img class="pc" src="/img/shoplink_list.jpg" alt="">
+                  <img class="sp" src="/img/shoplink_list_sp.jpg" alt="">
+                  <img class="iphone" src="/img/shoplink_list_iphone.jpg" alt="">
+                </div>
+                <div class="text ">
+                  <span>XXXXの</span><br /><span>取扱いfoodを</span><br /><span>ご覧ください。</span>
+                </div>
+                <div class="label">yy一覧</div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                  <div class="image">
+                      <img class="pc" src="/img/shoplink_open.jpg" alt="">
+                      <img class="sp" src="/img/shoplink_open_sp.jpg" alt="">
+                      <img class="iphone" src="/img/shoplink_open_iphone.jpg" alt="">
+              </div>
+                      <div class="text ">
+                  <span>FOOD店の</span><br><span>開業をお考えの方へ。</span>
+                </div>
+                <div class="label">開業支援</div>
+              </a>
+            </li>
+              
+            <li>
+              <a href="">
+                  <div class="image">
+                      <img class="pc" src="/img/shoplink_sample.jpg" alt="">
+                      <img class="sp" src="/img/shoplink_sample_sp.jpg" alt="">
+                      <img class="iphone" src="/img/shoplink_sample_iphone.jpg" alt="">
+                      </div>
+                <div class="text">
+                  <span>yy技能士が</span><br>
+                  <span>スープに合う麺を</span><br>
+                  <span>おすすめします。</span>
+                </div>
+                <div class="label">サンプル注文</div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="image">
+                  <img class="pc" src="/img/shoplink_tyokubai.jpg" alt="">
+                  <img class="sp" src="/img/shoplink_tyokubai_sp.jpg" alt="">
+                  <img class="iphone" src="/img/shoplink_tyokubai_iphone.jpg" alt="">
+                </div>
+                <div class="text">
+                  <span>テレビで話題の</span><br>
+                  <span>工場直売会！</span>
+                </div>
+                <div class="label ver2">次回は 8/10（日）開催！</div>
+              </a>
+            </li>
+            <!-- <li><img src="/img/design_a/link_01.jpg" /></li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--//section-->
+    <!--section-->
+    <section id="info">
+      <div class="section">
+        <h2 class="title"><img src="/img/info_title.png" alt="Blog&News 最新情報" /></h2>
+        <div class="infoList" type="fade">
+          <ul class="clearfix">
+            <li>
+              <a href="#" class="clearfix">
+                <div class="image"><img src="/img/info_image.jpg" /></div>
+                <div class="date">2018.07.01</div>
+                <div class="title">ウェブサイトリニューアル</div>
+                <div class="text">ウェブサイトがリニューアル致しました</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="clearfix">
+                <div class="image"><img src="/img/info_image.jpg" /></div>
+                <div class="date">2018.06.15</div>
+                <div class="title">6月のイベント案内</div>
+                <div class="text">16日（土）10-17時 楽麦舎 生パスタ特別販売。11-14時 打ちたて生うどん直売＠麺の停車場楽麦舎</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="clearfix">
+                <div class="image"><img src="/img/info_image.jpg" /></div>
+                <div class="date">2018.06.12</div>
+                <div class="title">独立開業に向けて</div>
+                <div class="text">空塾第２５期生、卒業のレシピ開発に挑戦！＜最終日は６月１７日＞</div>                  
+              </a>
+            </li>
+            <li>
+              <a href="#" class="clearfix">
+                <div class="image"><img src="/img/info_image.jpg" /></div>
+                <div class="date">2018.09.04</div>
+                <div class="title">9月のイベント案内</div>
+                <div class="text">4日 麺彩房中野本店、上海麺館、麺彩房五反田店 通常営業。雨の日はポイント２倍です。</div>                  
+              </a>
+            </li>
+            <li>
+              <a href="#" class="clearfix">
+                <div class="image"><img src="/img/info_image.jpg" /></div>
+                <div class="date">2018.09.04</div>
+                <div class="title">9月のイベント案内</div>
+                <div class="text">4日 麺彩房中野本店、上海麺館、麺彩房五反田店 通常営業。雨の日はポイント２倍です。</div>                  
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn01">
+          <a href="">一覧はこちら</a>
+          </div>
+      </div>
+    </section>
+    <!--//section-->
+    <!--section-->
+    <section id="shop02">
+      <div class="section">
+        <div class="shopList" type="fade">
+          <ul class="clearfix">
+            <li>
+              <a href="#">
+              <div class="image">
+                <img src="/img/xxxxshokuhin100.png"/>
+                <div class="circle">
+                  <img src="/img/xxxxshokuhin100_image.png"/ class="pc">
+                  <img src="/img/xxxxshokuhin100_image_tab.png"/ class="sp iphone">
+                </div>
+              </div>
+              <div class="title">XXXX100年のあゆみ</div>
+              <div class="desc">
+                キャッチ2行ダミー□□□<br class="pc">□□□□□□□□
+              </div>
+            </a>
+            </li>
+            <li>
+                <a href="#">
+              <div class="image">
+                <img src="/img/toriisiki.png"/>
+                <div class="circle">
+                  <img src="/img/toriisiki_image.png"/ class="pc">
+                  <img src="/img/toriisiki_image_tab.png"/ class="sp iphone">
+                </div>
+              </div>
+              <div class="title">空・塾</div>
+              <div class="desc">これから<br class="pc">独立開業を目指す方へ</div>
+            </a>
+            </li>
+            <li>
+                <a href="#">
+              <div class="image">
+                <img src="/img/tyokuei.png"/>
+                <div class="circle">
+                  <img src="/img/tyokuei_image.png" class="pc">
+                  <img src="/img/tyokuei_image_tab.png" class="sp iphone">
+                </div>
+              </div>
+              <div class="title">直営店・麺の直販店</div>
+              <div class="desc">キャッチ2行ダミー□□□<br class="pc">□□□□□□□□</div>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--//section-->
+    <!--section-->
+    <section id="voice">
+      <div class="section">
+        <h2 class="title"><img src="/img/voice_title.png" alt="Interview お客様・卒業生の声" /></h2>
+        <div class="voiceList" type="fade">
+          <ul class="clearfix">
+          	<li>
+                <a href="#">
+              <div class="image"><img src="/img/voice04.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.09.01</div>
+                <div class="shop">風雲児様</div>
+              </div>
+              <div class="desc">
+                  <div class="title">繁盛し続ける11年支えたXXXXの麺</div>
+                  <p>私が新宿に「風雲児」を創業しましたのが２００７年９月。今年９月でちょうど１１周年になります...</p>
+              </div>
+            </a>
+            </li>
+            <li>
+              <a href="#">
+              <div class="image"><img src="/img/voice01.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.08.11</div>
+                <div class="shop"> Nageyarii様</div>
+              </div>
+              <div class="desc">
+                <div class="title">FOOD調理の基礎を<br />徹底的に学んだ！</div>
+                <p>空塾に入る前から、調理、味づくりについてはかなりわかっているつもりでした。でも、塾では一つ...</p>
+              </div>
+            </a>
+            </li>
+            <li>
+                <a href="#">
+              <div class="image"><img src="/img/voice02.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.08.01</div>
+                <div class="shop">FOOD大山家様</div>
+              </div>
+              <div class="desc">
+                  <div class="title">特注の早茹で麺で<br />イベント大成功</div>
+                  <p>2014年10月に石川県金沢市で開催された「第8回　北陸FOOD博」に出店しました。地方でのイベン...</p>
+              </div>
+            </a>
+            </li>
+            <li>
+                <a href="#">
+              <div class="image"><img src="/img/voice03.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.07.01</div>
+                <div class="shop">中華そば味万様</div>
+              </div>
+              <div class="desc">
+                  <div class="title">親切で細やかな支援</div>
+                  <p>定年退職を控えた２０１４年２月、５６歳のときに「空塾」に入りました。開業支援と...</p>
+              </div>
+            </a>
+            </li>
+            <li>
+                <a href="#">
+              <div class="image"><img src="/img/voice04.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.09.01</div>
+                <div class="shop">風雲児様</div>
+              </div>
+              <div class="desc">
+                  <div class="title">繁盛し続ける11年支えたXXXXの麺</div>
+                  <p>私が新宿に「風雲児」を創業しましたのが２００７年９月。今年９月でちょうど１１周年になります...</p>
+              </div>
+            </a>
+            </li>
+            <li>
+              <a href="#">
+              <div class="image"><img src="/img/voice01.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.08.11</div>
+                <div class="shop"> Nageyarii様</div>
+              </div>
+              <div class="desc">
+                <div class="title">FOOD調理の基礎を<br />徹底的に学んだ！</div>
+                <p>空塾に入る前から、調理、味づくりについてはかなりわかっているつもりでした。でも、塾では一つ...</p>
+              </div>
+            </a>
+            </li>
+            <li>
+                <a href="#">
+              <div class="image"><img src="/img/voice02.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.08.01</div>
+                <div class="shop">FOOD大山家様</div>
+              </div>
+              <div class="desc">
+                  <div class="title">特注の早茹で麺で<br />イベント大成功</div>
+                  <p>2014年10月に石川県金沢市で開催された「第8回　北陸FOOD博」に出店しました。地方でのイベン...</p>
+              </div>
+            </a>
+            </li>
+            <li>
+                <a href="#">
+              <div class="image"><img src="/img/voice03.jpg" /></div>
+              <div class="head">
+                <div class="date">2018.07.01</div>
+                <div class="shop">中華そば味万様</div>
+              </div>
+              <div class="desc">
+                  <div class="title">親切で細やかな支援</div>
+                  <p>定年退職を控えた２０１４年２月、５６歳のときに「空塾」に入りました。開業支援と...</p>
+              </div>
+            </a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn01">
+          <a href="">一覧はこちら</a>
+          </div>
+      </div>
+    </section>
+    <!--//section-->
+    <!--section-->
+    <section id="sns">
+      <div class="section">
+        <div class="snsList" type="fade">
+          <ul class="clearfix">
+            <li><div class="fb-like-box" data-href="https://www.facebook.com/pages/%E5%A4%A7%E6%88%90%E9%A3%9F%E5%93%81%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE/740612395965684" width="300" data-height="387" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div></li>
+			<li><fb:like-box href="https://www.facebook.com/xxxxsyokuhinmenclub" height="387" width="300" colorscheme="light" show_faces="false" header="true" stream="true" show_border="true"></fb:like-box></li>
+          	
+<li><!-- InstaWidget -->
+<a href="https://instawidget.net/v/user/xxxxfoods" id="link-b1f1f06d16b9dbdb555ab6ee8ec617feba46e8f1ef69f4eb2e1fa317d55fe3c5">@xxxxfoods</a>
+<script src="https://instawidget.net/js/instawidget.js?u=b1f1f06d16b9dbdb555ab6ee8ec617feba46e8f1ef69f4eb2e1fa317d55fe3c5&width=300px"></script></li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--//section-->
+  </article>
+  <!--article-->
+  <!-- <article id="body" class="sp">
+    <img src="/img/design_a/sp_contents.jpg" />
+  </article> -->
+  <!--article-->
+</main>
+<!--//main-->
+<!--footer-->
+<!--#include virtual="/include/footer.html" -->
+<!--//footer-->
+<!--//body-->
+</body>
+</html>

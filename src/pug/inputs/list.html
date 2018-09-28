@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>XXXX様デザイン案　リストHTML</title>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style type="text/css">
+ul li span{font-size:14px;}
+table{border-collapse: collapse; margin-bottom:30px;}
+th,td{color:#000;border: solid 1px #666666;padding:0 3px;font-size:15px;}
+th{padding-top:5px;padding-bottom:5px;}
+td{background-color: #ffffff;}
+td a{text-decoration:none;}
+thead th{color: #fff;background-color:#3A375C;}
+
+a{ width:100%; height:100%; display:block;}
+.close{ text-align:center;}
+.black th,.black td{ background:#f0f0f0;}
+.fullOpen{ margin-bottom:10px; display:none;}
+.fullOpen a{background: #3A375C; width:150px; height:30px;display: flex;align-items: center;-webkit-align-items: center;justify-content: center;-webkit-justify-content: center; color:#fff;-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);-ms-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);-o-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);box-shadow: 2px 2px 2px rgba(0,0,0,0.3);-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);}
+.fullOpen a:hover{ cursor:pointer; opacity:0.8;}
+.lastCnt{ color:#ff0000; font-weight:bold;}
+h1 .cnt{ font-size:20px;}
+th:nth-child(n + 6),
+td:nth-child(n + 6){ display:none;}
+.category{background:#c0c0c0;}
+</style>
+<script type="text/javascript">
+$(function(){var b=0;var e=location.hostname;$("td.url").each(function(){b=$(this).text();b=b.replace(/ /g,"");$(this).html("<a href='"+b+"' target='_blank'>[--LINK--]</a>")});$(".fullOpen a").click(function(){$(".url a").each(function(){window.open($(this).attr("href"))});return false});var a=1;var c=0;$("table").each(function(){$(this).find("tbody th").each(function(){$(this).text(a);a++;c++});a=1});CloseCnt=0;LastCnt=0;$(".close").each(function(){if($(this).text()=="●"){CloseCnt++}});LastCnt=c-CloseCnt;$("h1 .fullCnt").text(c);$("h1 .closeCnt").text(CloseCnt);$("h1 .lastCnt").text(LastCnt)});function ajaxScript(e,d){var h,c,i;var g=e;var f=d;$.ajax({type:"GET",url:f,dataType:"html",dataFilter:function(b,a){h=$(b).find("h1").text().replace(/\r?\n/g,"¥").replace(/ /g,"").replace(/¥/g," ").replace(/\|/g," | ");c=b.match(/<title>(.*)<\/title>/)[1].replace(/\r?\n/g,"¥").replace(/ /g,"").replace(/¥/g," ").replace(/\|/g," | ");i=b.match(/description(.*) content(.*)/)[2].replace(/\"/g,"").replace(/=/g,"").replace(/>/g,"").replace(/\/$/g,"").replace(/ /g,"");$(g).parent().siblings(".h1").text(h);$(g).parent().siblings(".title").text(c);$(g).parent().siblings(".disc").text(i)}})}$(function(){var a=0;var b=0;$(".url a").each(function(){b=$(this);a=b.attr("href");ajaxScript(b,a)})});
+</script>
+</head>
+<body>
+<h1>XXXX様デザイン案　リストHTML<!-- <span class="cnt">（<span class="closeCnt"></span>/<span class="fullCnt"></span>）残り<span class="lastCnt"></span>ページ</span> --></h1>
+<div class="fullOpen"><a>>　全て開く</a></div>
+<h2>2018年8月27日</h2>
+<table style="margin-bottom:40px;">
+  <thead>
+    <tr>
+      <th class="no">No </th>
+      <th class="page">ページ</th>
+      <th class="url">URL</th>
+      <th class="update">更新日</th>
+      <th class="comment">備考</th>
+      <th class="title">title</th>
+      <th class="h1">h1</th>
+      <th class="disc">disc</th>
+    </tr>
+  </thead>
+  <tbody>
+  <!--  <tr>
+      <th class="no"></th>
+      <td class="page">TOP</td>
+      <td class="url">/</td>
+      <td class="update"></td>
+      <td class="comment">・カーソルリンク修正<br />
+        ・お客様の声、写真した余白調整・罫線削除<br />
+        ・ソーシャルメディア位置移動・タイトル削除<br />
+        ・フッターナビ、削除・追加<br />
+      ・メイン下のコンテンツ、一部分修正</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>-->
+    <tr>
+      <th class="no"></th>
+      <td class="page">TOP B案</td>
+      <td class="url">/index_b.html</td>
+      <td class="update"></td>
+      <td class="comment">B案に択一。<br />
+      修正有●お客様の声にカテゴリー追加済</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <!-- <tr>
+      <th class="no"></th>
+      <td class="page">TOP 修正前 (旧)</td>
+      <td><a href="/_index.html" target="_blank">[--LINK--]
+</a></td>
+      <td class="comment">・スライドショーの追加<br />
+      ・メガメニューの実装</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr> -->
+     <tr>
+      <td colspan="7" class="category">業務用yy /work/</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">一覧</td>
+      <td class="url">work/index.html</td>
+      <td class="update"></td>
+      <td class="comment">●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">業務用foodシリーズ</td>
+      <td class="url">design/product02.html</td>
+      <td class="update">09/07作成</td>
+      <td class="comment">原稿受領済み<br />修正有</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">オリジナル麺</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr><tr>
+      <th class="no"></th>
+      <td class="page">FOOD用食材</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">製品カタログPDF</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="category">sampleのご注文 /sample/</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">一覧</td>
+      <td class="url">sample/index.html</td>
+      <td class="update">09/07作成</td>
+      <td class="comment">原稿受領済み●ページ作成済み<br />
+      修正有</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">詳細</td>
+      <td class="url">design/sample02.html</td>
+      <td class="update">09/07作成</td>
+      <td class="comment">原稿受領済み<br />
+      修正有</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">サンプル注文フォーム</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    
+     <tr>
+      <td colspan="7" class="category">開業運用支援 /support/</td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">一覧</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">FOOD店の開業をお考えの方</td>
+      <td class="url">support/kaigyo_food.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">スープに合う個性のある麺を探している方</td>
+      <td class="url">support/kaigyo_men.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">社員食堂や学食のメニューをご検討の方</td>
+      <td class="url">support/kaigyo_menu.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">オリジナルFOOD商品を作りたい方</td>
+      <td class="url">support/kaigyo_original.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">FOOD店の展開を検討している企業様</td>
+      <td class="url">support/kaigyo_kigyo.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="category">XXXXのこだわり /kodawari/</td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">一覧</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">味へのこだわり</td>
+      <td class="url">kodawari/kodawari_aji.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">麺ができるまで</td>
+      <td class="url">kodawari/kodawari_kotei.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">安全・衛生管理と社員教育</td>
+      <td class="url">kodawari/kodawari_kanri.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+     <tr>
+      <td colspan="7" class="category">お客様の声 /voice/</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">一覧</td>
+      <td class="url">voice/index.html</td>
+      <td class="update">08/29作成</td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">カテゴリー一覧</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">詳細</td>
+      <td class="url">voice/voice_detail.html</td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み●ページ作成済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    
+     <tr>
+      <td colspan="7" class="category">直営店・販売店 /wholesales/</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">一覧</td>
+      <td class="url">design/who01.html</td>
+      <td class="update">09/07作成</td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">大成麺市場・工場直売会</td>
+      <td class="url">design/who02.html</td>
+      <td class="update">09/07作成</td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">楽麦舎</td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">麺の停車場楽麦舎</td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">麺彩房 中野本店</td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">麺彩房 五反田店</td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">豚そば　鶏つけそば専門店　上海麺館 </td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">中村屋</td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+     <tr>
+      <td colspan="7" class="category">会社案内 /company/</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">会社概要</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">代表者あいさつ</td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">XXXX100年の歩み</td>
+      <td ></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+     <tr>
+      <td colspan="7" class="category">お知らせ /news/</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">一覧</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">カテゴリー一覧</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">詳細</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="category">その他</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">よくある質問</td>
+      <td class="url">design/faq01.html</td>
+      <td class="update">09/13作成</td>
+      <td class="comment">原稿受領済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">お問い合わせフォーム</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">サイトマップ</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="category">空FOOD塾</td>
+    </tr>
+     <tr>
+      <th class="no"></th>
+      <td class="page">空塾　トップ</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">空塾とは</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment">塾長あいさつ、カリキュラム、受講料金、講義スケジュール例、講師紹介</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">募集要項</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment">XXXXの「最新情報」から読み込み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">入塾から開店までの流れ</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">活躍する卒業生たち</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment">XXXXの「お客様の声」から読み込み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">卒業生の声</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment">XXXXの「お客様の声」から読み込み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">卒業生の店</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment">XXXXの「最新情報」から読み込み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr><tr>
+      <th class="no"></th>
+      <td class="page">お知らせ</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment">XXXXの「最新情報」から読み込み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">宿泊施設のご紹介</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">資料請求フォーム</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">よくある質問</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">お問い合わせフォーム</td>
+      <td></td>
+      <td class="update"></td>
+      <td class="comment"></td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>2018年7月24日</h2>
+<table style="margin-bottom:40px;">
+  <thead>
+    <tr>
+      <th class="no">No </th>
+      <th class="page">ページ</th>
+      <th class="url">URL</th>
+      <th class="comment">備考</th>
+      <th class="title">title</th>
+      <th class="h1">h1</th>
+      <th class="disc">disc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="no"></th>
+      <td class="page">最新案</td>
+      <td class="url">a_k2.html</td>
+      <td class="comment">&nbsp;</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h2>2018年7月6日</h2>
+<table>
+  <thead>
+    <tr>
+      <th class="no">No </th>
+      <th class="page">ページ</th>
+      <th class="url">URL</th>
+      <th class="comment">備考</th>
+      <th class="title">title</th>
+      <th class="h1">h1</th>
+      <th class="disc">disc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="no"></th>
+      <td class="page">A案</td>
+      <td class="url">a.html</td>
+      <td class="comment">SP版対応済み</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+    <tr>
+      <th class="no"></th>
+      <td class="page">B案</td>
+      <td class="url">b.html</td>
+      <td class="comment">こちらはSP版はありません</td>
+      <td class="title"></td>
+      <td class="h1"></td>
+      <td class="disc"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

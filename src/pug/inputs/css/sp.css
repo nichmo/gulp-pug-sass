@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* **ソートリスト**
+1__全体設定
+2__TOP設定
+3__下層設定
+4__CSSハック
+5__プラグイン制御
+6__スクリプト発火
+*/
+
+@media screen and (max-width: 600px) and (orientation: portrait){
+/*============================
+#1__全体設定
+============================*/
+/* -基本設定- */
+body{padding-top: 70px;}
+.sp{display: none;}
+.sp.iphone{display:block;}
+.iphone{display: block;}
+select{width: 300px;}
+
+/* -header- */
+.headerContain{padding-right: 40px;}
+.headerContain .logo{max-width: 90%;}
+.headerContain .link{max-width: 30%;}
+.header > nav > ul > li > ul.inner{padding: 20px;}
+.header > nav a .mail{width: 88%;}
+.header > nav a .mail p{padding: 0;}
+.header > nav .tel{padding: 0; margin: 0 auto; width: 88%;}
+
+.header > nav .tel .image{height: 55px;}
+
+/* -nav- */
+nav{ width:85%;}
+.nav > ul > li{ font-size:15px;}
+.nav > .spMenu{width:  80%;margin: 20px auto;}
+.spTab .tabMenu{top: 64px;}
+.spTab ul li{padding: 10px 0;}
+.spTab ul li p{display: flex;justify-content: center;-webkit-justify-content: center;align-items:  center;-webkit-align-items: center;min-height: 35px;font-size:  15px;}
+
+.spnav > ul > li > ul > li{padding: 0 10px;}
+
+.header > nav{width: 88%;}
+/* -main- */
+.headerContain .icons{display: none;}
+
+.mainVisual > .messageWrap{width: 100%;}
+
+.shopList > ul{flex-direction: column;margin: 0 auto;width: calc(100% - 30px);}
+.shopList > ul > li{width: 100%; margin-right: 0;}
+.shopList .image{height: 40vw;width: 40%;margin: 0 auto 10px auto;float:  left;}
+.shopList .image .circle{margin-left:0;left: 0;width: 100%;display:  none;}
+.shopList .image > img:first-child{background: rgba(255,255,255, .6)}
+
+.drop_menu_inner ul{padding: 0;}
+.drop_menu_inner ul li a{padding: 15px 0px 15px 20px;}
+/* .shopLink > ul{display: flex; }
+
+.shopList > ul{flex-direction: column}
+
+.shopList .image{height: 220px;}
+.shopList .image .circle{margin-top: 0; margin-left: 190px; width: 220px; height: 220px; top: 50%; transform: translate(-50%, -50%)} */
+/* -section- */
+#body .section{padding: 50px 0;}
+
+/* -pankuzu- */
+
+/* -footer- */
+.footer{width:  100%;margin:  0 auto;}
+.footer_link{width: 80%; flex-direction: column}
+.footer_link > ul:first-child{width: 100%;}
+.footer > nav{width: 100%;}
+.footer > nav > ul > li{font-size: 14px;}
+.footer > nav > ul > li > a{padding: 0 10px;}
+
+
+/*============================
+#2__TOP設定
+============================*/
+/* -基本設定- */
+
+/* -各セクションごとの設定- */
+.mainVisual > .messageWrap{height: 220px;}
+.mainVisual > .messageWrap > ul > li > img{width: 85%;height: 85%;}
+.mainVisual > .messageWrap > ul > li:nth-child(1){top: 45px;}
+.mainVisual > .messageWrap > ul > li:nth-child(2){top: 135px;}
+
+
+.shopLink > ul > li{ margin-right:0; display:block;}
+.sampleList > ul > li{ margin-right:0; display:block;}
+.infoList > ul > li{width: 84%;margin: 0 auto 30px auto;}
+.countList{ padding:10px 0;}
+.countList > ul > li > .number{font-size: 60px;}
+.countList > ul > li > .unit{ font-size:25px;}
+
+.infoList .image{margin-bottom:10px;width:  auto;height:  auto;}
+.infoList .date{
+    margin-bottom:  10px;
+}
+.infoList .title{
+    font-size:  18px;
+    margin-bottom:  10px;
+}
+.infoList .text{
+    width:  auto;
+    text-align:  left;
+}
+.shopList .title{
+    float: right;
+    width: 55%;
+    margin-top:  10px;
+}
+.shopList .desc{
+    float: right;
+    width: 50%;
+}
+.voiceList .desc{ width:auto;}
+.voiceList .desc > p{word-break: break-all;}
+
+/*============================
+#3__下層設定
+============================*/
+/* -基本設定- */
+
+/* -各ページごとの設定- */
+.shopLink > ul > li{width: 100%;margin-bottom:  5px;}
+.shopLink > ul > li > a > .text{top: 15px;font-size: 24px;-ms-writing-mode: inherit;-webkit-writing-mode: inherit;-o-writing-mode: inherit;writing-mode: inherit;width:  90%;font-size: 20px;left:  10px;transform: translate(0%, 0%);}
+.shopLink > ul > li > a > .image{ width: 100%; height: auto;}
+.snsList ul li{margin:0 0 20px 0;}
+.snsList ul{text-align:center;}
+.bannerList ul{text-align:center;}
+.bannerList ul li{margin:0 0 10px 0;}
+.btn01{margin-top:10px;width: calc(100% - 30px);}
+.btn01 a{width: 70%;
+    margin: 20px auto 0 auto;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;}
+.btn01 a:before{top: 18px;
+    width: 4px;
+    height: 4px;}
+.shopLink > ul > li > a > .text > span{
+    margin: 0 0 5px 0;
+    padding:  2px 10px;
+}
+.shopLink > ul > li > a > .label,.shopLink > ul > li > a > .label.ver2{
+    font-size:  14px;
+    line-height:  30px;
+}
+.shopLink > ul > li > a > .text2{
+    top: 20px;
+    height: calc(100% - 70px);
+    width: calc(100% - 40px);
+}
+.shopLink > ul > li > a > .text2 .tit{
+    font-size:  18px;
+    margin-bottom:  5px;
+}
+.shopLink > ul > li > a > .text2 ul li{
+    font-size:  14px;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, *, *:before, *:after, *:hover, *:checked, div div div div div{}
+
+/*============================
+#4__CSSハック
+============================*/
+/* -ファイアフォックス- */
+@-moz-document url-prefix() {
+
+}
+
+/* -IE- */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+}
+
+
+/*============================
+#5__プラグイン制御
+============================*/
+/* -基本設定- */
+.slick-prev,
+.slick-next{top: 100px;height: 30px;}
+.slick-prev{left: 0;}
+.slick-next{right: 0;}
+#info .infoList > ul li,
+#voice .voiceList > ul li{width: 100%;margin: 0 10px;}
+
+
+/*============================
+#6__スクリプト発火
+============================*/
+/* -基本設定- */
+
+
+/*============================
+#7__下層ページ
+============================*/
+/* -基本設定- */
+
+.kaso .voiceList { width: 320px; }
+  .kaso article#body section:nth-child(1) .title { font-size: 22px; }
+  .kaso article#body section:nth-child(1) .subtitle { font-size: 22px; }
+  .kaso article#body section:nth-child(1) .desc p { font-size: 16px; }
+  .kaso #body .section { top: 0; padding: 30px 0; }
+  .kaso #body .section .title span:nth-child(3) { font-size: 20px; }
+  .kaso section { padding-bottom: 0; }
+  .kaso section .flow dt { float: none; padding: 5% 5% 0; }
+  .kaso section .flow dd { padding: 5%; }
+  .kaso section .button { width: 90%; margin: 30px auto 0; }
+  .kaso section .button a { width: 100%; }
+  .kaso section .infomation .tel { float: none; width: 100%; padding-bottom: 20px; }
+  .kaso section .infomation .mail { width: 100%; margin-left: 0; }
+  .kaso section .tableform dl { flex-direction: column; border: none; }
+  .kaso section .tableform dt { width: 100%; }
+  .kaso section .tableform dd { width: 100%; }
+  .kaso section .voiceList > ul > li { margin-bottom: 20px; margin-right: 0; }
+  .kaso section .voiceList > ul > li:last-child { margin-bottom: 50px; }
+  .kaso.kodawari .mainVisual h1 { width: 306px; font-size: 34px; }
+  .kaso.sample .mainVisual h1 { width: 290px; font-size: 32px; }
+  #work_top_01 .button { width: 90%; }
+  #work_top_01 .button a + a { margin-top: 20px; margin-bottom: 20px; }
+  .snsLink a { width: 100px; } 
+  
+}
+
+@media screen and (max-width: 380px) and (orientation: portrait){
+.spTab ul li span{ display:none;}
+}
